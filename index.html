@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Retrospective Summary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9FAFB; /* Even lighter gray for a cleaner page background */
+        }
+        .retro-card-container {
+            display: flex; /* Added for consistent height if needed, though grid handles it well */
+            flex-direction: column;
+        }
+        .retro-card {
+            background-color: white;
+            border-radius: 0.75rem; /* 12px */
+            padding: 1.75rem; /* 28px - Adjusted padding */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Standard Tailwind shadow-md */
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; /* Make cards in a row take equal height if parent is flex */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .retro-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Tailwind shadow-lg */
+        }
+        .retro-card h3 {
+            font-size: 1.25rem; /* 20px */
+            font-weight: 700;
+            margin-bottom: 1rem; /* 16px */
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid transparent; /* Placeholder for colored border */
+            padding-bottom: 0.5rem;
+        }
+        .retro-card h3 span.emoji {
+            margin-right: 0.625rem; /* 10px */
+            font-size: 1.5rem; /* 24px */
+        }
+        .retro-card ul {
+            list-style-type: none;
+            padding-left: 0; /* Remove default padding */
+            font-size: 0.9rem; /* 14.4px */
+            line-height: 1.65;
+            color: #4B5563; /* Gray 600 */
+            flex-grow: 1;
+        }
+        .retro-card li {
+            margin-bottom: 0.5rem; /* 8px */
+            padding-left: 1.5rem; 
+            position: relative;
+        }
+        .retro-card li::before {
+            content: '✓'; /* Using a checkmark for a cleaner look */
+            position: absolute;
+            left: 0;
+            font-size: 0.9rem;
+            font-weight: 600;
+            line-height: inherit;
+        }
+
+        /* Card Specific Styling for Variety */
+        .positive { border-top: 4px solid #10B981; /* Emerald 500 */ }
+        .positive h3 { color: #047857; /* Emerald 700 */ border-bottom-color: #A7F3D0; /* Emerald 200 */ }
+        .positive li::before { color: #10B981; }
+
+        .improvement { border-top: 4px solid #F59E0B; /* Amber 500 */ }
+        .improvement h3 { color: #B45309; /* Amber 700 */ border-bottom-color: #FDE68A; /* Amber 200 */ }
+        .improvement li::before { color: #F59E0B; content: '💡'; font-size: 0.8rem; } /* Different icon */
+
+        .learnings { border-top: 4px solid #3B82F6; /* Blue 500 */ }
+        .learnings h3 { color: #1D4ED8; /* Blue 700 */ border-bottom-color: #BFDBFE; /* Blue 200 */ }
+        .learnings li::before { color: #3B82F6; content: '🎓'; font-size: 0.8rem; } /* Different icon */
+
+        .actions { border-top: 4px solid #8B5CF6; /* Violet 500 */ }
+        .actions h3 { color: #6D28D9; /* Violet 700 */ border-bottom-color: #DDD6FE; /* Violet 200 */ }
+        .actions li::before { color: #8B5CF6; content: '➔'; font-size: 0.9rem; } /* Different icon */
+        
+        .main-title-container {
+            padding-bottom: 1rem; /* 16px */
+            margin-bottom: 2.5rem; /* 40px */
+            border-bottom: 3px solid #60A5FA; /* Blue 400 for a bit of color */
+            text-align: center;
+        }
+        .main-title {
+            color: #1F2937; /* Gray 800 */
+            letter-spacing: -0.025em;
+            font-weight: 700; /* Ensure it's bold */
+        }
+        .sub-title {
+            color: #6B7280; /* Gray 500 */
+        }
+
+    </style>
+</head>
+<body class="p-6 md:p-10">
+    <div class="max-w-7xl mx-auto">
+        
+        <div class="main-title-container">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl main-title">Team Retrospective Insights</h1>
+            <p class="text-md sm:text-lg md:text-xl sub-title mt-2">Key Outcomes & Reflections - June 12, 2025</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            
+            <div class="retro-card-container">
+                <div class="retro-card positive">
+                    <h3><span class="emoji">👍</span>What Went Well?</h3>
+                    <ul>
+                        <li>Effective collaboration and strong mutual support throughout the project.</li>
+                        <li>Significant improvement in communication clarity and rhythm due to daily check-ins.</li>
+                        <li>Clear role allocation based on the "Allocation of Tasks Agreement" generally worked well.</li>
+                        <li>Successful problem-solving and adaptation using strategies from Health Monitor checkpoints.</li>
+                        <li>High quality of final deliverables and overall project output.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="retro-card-container">
+                <div class="retro-card improvement">
+                    <h3><span class="emoji">🤔</span>What Could Be Improved?</h3>
+                    <ul>
+                        <li>More proactive workload balancing from the very start for foundational tasks.</li>
+                        <li>Faster decision-making processes for highly detailed items to avoid schedule pressure.</li>
+                        <li>More granular progress tracking within very large analytical tasks for better daily visibility.</li>
+                        <li>Earlier alignment on document formatting/style to reduce final compilation effort.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="retro-card-container">
+                <div class="retro-card learnings">
+                    <h3><span class="emoji">💡</span>Key Learnings</h3>
+                    <ul>
+                        <li>Regular, brief check-ins (stand-ups) are invaluable for team alignment and issue resolution.</li>
+                        <li>Proactive workload discussions prevent bottlenecks and improve team well-being.</li>
+                        <li>Structured decision-making processes are needed for complex, detailed discussions under tight deadlines.</li>
+                        <li>Breaking down large tasks into smaller, manageable sub-tasks improves progress visibility.</li>
+                        <li>Early agreement on a mini style guide can save significant time in later stages.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="retro-card-container">
+                <div class="retro-card actions">
+                    <h3><span class="emoji">🚀</span>Action Items for Future Projects</h3>
+                    <ul>
+                        <li>Implement daily stand-ups from project inception.</li>
+                        <li>Conduct detailed workload forecasting and distribution discussions before each major phase.</li>
+                        <li>Time-box detailed discussions and establish clear decision-making protocols.</li>
+                        <li>Encourage team members to individually break down large tasks for self-management.</li>
+                        <li>Develop and share a brief project style guide at the outset.</li>
+                        <li>Continue using a Team Health Monitor with regular checkpoints.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
