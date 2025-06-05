@@ -12,7 +12,7 @@
             background-color: #F9FAFB; /* Even lighter gray for a cleaner page background */
         }
         .retro-card-container {
-            display: flex; /* Added for consistent height if needed, though grid handles it well */
+            display: flex; 
             flex-direction: column;
         }
         .retro-card {
@@ -22,7 +22,7 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Standard Tailwind shadow-md */
             display: flex;
             flex-direction: column;
-            flex-grow: 1; /* Make cards in a row take equal height if parent is flex */
+            flex-grow: 1; 
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
         .retro-card:hover {
@@ -35,7 +35,7 @@
             margin-bottom: 1rem; /* 16px */
             display: flex;
             align-items: center;
-            border-bottom: 2px solid transparent; /* Placeholder for colored border */
+            border-bottom: 2px solid transparent; 
             padding-bottom: 0.5rem;
         }
         .retro-card h3 span.emoji {
@@ -44,7 +44,7 @@
         }
         .retro-card ul {
             list-style-type: none;
-            padding-left: 0; /* Remove default padding */
+            padding-left: 0; 
             font-size: 0.9rem; /* 14.4px */
             line-height: 1.65;
             color: #4B5563; /* Gray 600 */
@@ -56,7 +56,7 @@
             position: relative;
         }
         .retro-card li::before {
-            content: '✓'; /* Using a checkmark for a cleaner look */
+            content: '✓'; 
             position: absolute;
             left: 0;
             font-size: 0.9rem;
@@ -64,36 +64,35 @@
             line-height: inherit;
         }
 
-        /* Card Specific Styling for Variety */
-        .positive { border-top: 4px solid #10B981; /* Emerald 500 */ }
-        .positive h3 { color: #047857; /* Emerald 700 */ border-bottom-color: #A7F3D0; /* Emerald 200 */ }
+        .positive { border-top: 4px solid #10B981; }
+        .positive h3 { color: #047857; border-bottom-color: #A7F3D0; }
         .positive li::before { color: #10B981; }
 
-        .improvement { border-top: 4px solid #F59E0B; /* Amber 500 */ }
-        .improvement h3 { color: #B45309; /* Amber 700 */ border-bottom-color: #FDE68A; /* Amber 200 */ }
-        .improvement li::before { color: #F59E0B; content: '💡'; font-size: 0.8rem; } /* Different icon */
+        .improvement { border-top: 4px solid #F59E0B; }
+        .improvement h3 { color: #B45309; border-bottom-color: #FDE68A; }
+        .improvement li::before { color: #F59E0B; content: '💡'; font-size: 0.8rem; }
 
-        .learnings { border-top: 4px solid #3B82F6; /* Blue 500 */ }
-        .learnings h3 { color: #1D4ED8; /* Blue 700 */ border-bottom-color: #BFDBFE; /* Blue 200 */ }
-        .learnings li::before { color: #3B82F6; content: '🎓'; font-size: 0.8rem; } /* Different icon */
+        .learnings { border-top: 4px solid #3B82F6; }
+        .learnings h3 { color: #1D4ED8; border-bottom-color: #BFDBFE; }
+        .learnings li::before { color: #3B82F6; content: '🎓'; font-size: 0.8rem; }
 
-        .actions { border-top: 4px solid #8B5CF6; /* Violet 500 */ }
-        .actions h3 { color: #6D28D9; /* Violet 700 */ border-bottom-color: #DDD6FE; /* Violet 200 */ }
-        .actions li::before { color: #8B5CF6; content: '➔'; font-size: 0.9rem; } /* Different icon */
+        .actions { border-top: 4px solid #8B5CF6; }
+        .actions h3 { color: #6D28D9; border-bottom-color: #DDD6FE; }
+        .actions li::before { color: #8B5CF6; content: '➔'; font-size: 0.9rem; }
         
         .main-title-container {
-            padding-bottom: 1rem; /* 16px */
-            margin-bottom: 2.5rem; /* 40px */
-            border-bottom: 3px solid #60A5FA; /* Blue 400 for a bit of color */
+            padding-bottom: 1rem; 
+            margin-bottom: 2.5rem; 
+            border-bottom: 3px solid #60A5FA; 
             text-align: center;
         }
         .main-title {
-            color: #1F2937; /* Gray 800 */
+            color: #1F2937; 
             letter-spacing: -0.025em;
-            font-weight: 700; /* Ensure it's bold */
+            font-weight: 700; 
         }
         .sub-title {
-            color: #6B7280; /* Gray 500 */
+            color: #6B7280; 
         }
 
     </style>
@@ -110,25 +109,26 @@
             
             <div class="retro-card-container">
                 <div class="retro-card positive">
-                    <h3><span class="emoji">👍</span>What Went Well?</h3>
+                    <h3><span class="emoji">👍</span>What went well as a group?</h3>
                     <ul>
-                        <li>Effective collaboration and strong mutual support throughout the project.</li>
-                        <li>Significant improvement in communication clarity and rhythm due to daily check-ins.</li>
-                        <li>Clear role allocation based on the "Allocation of Tasks Agreement" generally worked well.</li>
-                        <li>Successful problem-solving and adaptation using strategies from Health Monitor checkpoints.</li>
-                        <li>High quality of final deliverables and overall project output.</li>
+                        <li>Maintained effective and consistent communication throughout the project.</li>
+                        <li>Successfully managed project workload and adhered to timelines effectively.</li>
+                        <li>Demonstrated strong alignment on shared project goals and objectives.</li>
+                        <li>Fostered strong and effective collaboration, with members supporting each other.</li>
+                        <li>Individuals showed initiative and leadership within their respective roles and tasks.</li>
+                        <li>Evidenced a collective commitment to continuous improvement and learning from experiences.</li>
                     </ul>
                 </div>
             </div>
 
             <div class="retro-card-container">
                 <div class="retro-card improvement">
-                    <h3><span class="emoji">🤔</span>What Could Be Improved?</h3>
+                    <h3><span class="emoji">🤔</span>What could we have done better?</h3>
                     <ul>
-                        <li>More proactive workload balancing from the very start for foundational tasks.</li>
-                        <li>Faster decision-making processes for highly detailed items to avoid schedule pressure.</li>
-                        <li>More granular progress tracking within very large analytical tasks for better daily visibility.</li>
-                        <li>Earlier alignment on document formatting/style to reduce final compilation effort.</li>
+                        <li>Further improve the synchronization of initial task engagement across all team members for all project phases.</li>
+                        <li>Refine processes for sharing progress updates to ensure information flow was always seamless, even when managing staggered starts on certain activities.</li>
+                        <li>Proactively address potential variations in individual timelines earlier to ensure smoother team pacing.</li>
+                        <li>Reinforce strategies for integrating contributions from members who may join activities at different stages.</li>
                     </ul>
                 </div>
             </div>
