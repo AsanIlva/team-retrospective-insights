@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F9FAFB; /* Even lighter gray for a cleaner page background */
+            background-color: #F9FAFB; 
         }
         .retro-card-container {
             display: flex; 
@@ -17,9 +17,9 @@
         }
         .retro-card {
             background-color: white;
-            border-radius: 0.75rem; /* 12px */
-            padding: 1.75rem; /* 28px - Adjusted padding */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Standard Tailwind shadow-md */
+            border-radius: 0.75rem;
+            padding: 1.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             display: flex;
             flex-direction: column;
             flex-grow: 1; 
@@ -27,31 +27,31 @@
         }
         .retro-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Tailwind shadow-lg */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
         .retro-card h3 {
-            font-size: 1.25rem; /* 20px */
+            font-size: 1.25rem;
             font-weight: 700;
-            margin-bottom: 1rem; /* 16px */
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
             border-bottom: 2px solid transparent; 
             padding-bottom: 0.5rem;
         }
         .retro-card h3 span.emoji {
-            margin-right: 0.625rem; /* 10px */
-            font-size: 1.5rem; /* 24px */
+            margin-right: 0.625rem;
+            font-size: 1.5rem;
         }
         .retro-card ul {
             list-style-type: none;
             padding-left: 0; 
-            font-size: 0.9rem; /* 14.4px */
+            font-size: 0.9rem;
             line-height: 1.65;
-            color: #4B5563; /* Gray 600 */
+            color: #4B5563;
             flex-grow: 1;
         }
         .retro-card li {
-            margin-bottom: 0.5rem; /* 8px */
+            margin-bottom: 0.5rem;
             padding-left: 1.5rem; 
             position: relative;
         }
@@ -72,13 +72,13 @@
         .improvement h3 { color: #B45309; border-bottom-color: #FDE68A; }
         .improvement li::before { color: #F59E0B; content: '💡'; font-size: 0.8rem; }
 
-        .learnings { border-top: 4px solid #3B82F6; }
-        .learnings h3 { color: #1D4ED8; border-bottom-color: #BFDBFE; }
-        .learnings li::before { color: #3B82F6; content: '🎓'; font-size: 0.8rem; }
+        .next-steps { border-top: 4px solid #3B82F6; }
+        .next-steps h3 { color: #1D4ED8; border-bottom-color: #BFDBFE; }
+        .next-steps li::before { color: #3B82F6; content: '➔'; font-size: 0.9rem; }
 
-        .actions { border-top: 4px solid #8B5CF6; }
-        .actions h3 { color: #6D28D9; border-bottom-color: #DDD6FE; }
-        .actions li::before { color: #8B5CF6; content: '➔'; font-size: 0.9rem; }
+        .questions { border-top: 4px solid #8B5CF6; }
+        .questions h3 { color: #6D28D9; border-bottom-color: #DDD6FE; }
+        .questions li::before { color: #8B5CF6; content: '?'; font-size: 0.9rem; font-weight:700; }
         
         .main-title-container {
             padding-bottom: 1rem; 
@@ -125,7 +125,7 @@
                 <div class="retro-card improvement">
                     <h3><span class="emoji">🤔</span>What could we have done better?</h3>
                     <ul>
-                        <li>Further improve the synchronization of initial task engagement across all team members for all project phases.</li>
+                        <li>Further improve the synchronisation of initial task engagement across all team members for all project phases.</li>
                         <li>Refine processes for sharing progress updates to ensure information flow was always seamless, even when managing staggered starts on certain activities.</li>
                         <li>Proactively address potential variations in individual timelines earlier to ensure smoother team pacing.</li>
                         <li>Reinforce strategies for integrating contributions from members who may join activities at different stages.</li>
@@ -134,28 +134,27 @@
             </div>
 
             <div class="retro-card-container">
-                <div class="retro-card learnings">
-                    <h3><span class="emoji">💡</span>Key Learnings</h3>
+                <div class="retro-card next-steps">
+                    <h3><span class="emoji">🚀</span>What should we try next?</h3>
                     <ul>
-                        <li>Regular, brief check-ins (stand-ups) are invaluable for team alignment and issue resolution.</li>
-                        <li>Proactive workload discussions prevent bottlenecks and improve team well-being.</li>
-                        <li>Structured decision-making processes are needed for complex, detailed discussions under tight deadlines.</li>
-                        <li>Breaking down large tasks into smaller, manageable sub-tasks improves progress visibility.</li>
-                        <li>Early agreement on a mini style guide can save significant time in later stages.</li>
+                        <li>Implement daily stand-ups from project inception to maintain alignment from day one.</li>
+                        <li>Conduct detailed workload forecasting and distribution discussions before each major project phase begins.</li>
+                        <li>Time-box detailed discussions on complex items and establish clear decision-making protocols to maintain momentum.</li>
+                        <li>Encourage all team members to individually break down their large tasks into smaller personal sub-tasks.</li>
+                        <li>Develop and share a brief project style guide at the outset to ensure document consistency.</li>
                     </ul>
                 </div>
             </div>
 
             <div class="retro-card-container">
-                <div class="retro-card actions">
-                    <h3><span class="emoji">🚀</span>Action Items for Future Projects</h3>
+                <div class="retro-card questions">
+                    <h3><span class="emoji">❓</span>What questions do we have?</h3>
                     <ul>
-                        <li>Implement daily stand-ups from project inception.</li>
-                        <li>Conduct detailed workload forecasting and distribution discussions before each major phase.</li>
-                        <li>Time-box detailed discussions and establish clear decision-making protocols.</li>
-                        <li>Encourage team members to individually break down large tasks for self-management.</li>
-                        <li>Develop and share a brief project style guide at the outset.</li>
-                        <li>Continue using a Team Health Monitor with regular checkpoints.</li>
+                        <li>How can we better anticipate workload for foundational tasks in future projects?</li>
+                        <li>What is the most effective, low-effort way to maintain document style consistency from the start?</li>
+                        <li>Are there better tools or methods for tracking granular sub-task progress within a larger team task?</li>
+                        <li>How do we ensure that even with a designated integrator, all voices feel equally heard in final-stage decisions?</li>
+                        <li>What is the best way to celebrate our success as a team now that the project is complete?</li>
                     </ul>
                 </div>
             </div>
